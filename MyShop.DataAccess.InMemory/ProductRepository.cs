@@ -60,10 +60,7 @@ namespace MyShop.DataAccess.InMemory
             }
         }
 
-        public IQueryable<Product> Collection()
-        {
-            return products.AsQueryable();//product listesini sorgulanabilir bir liste plarak döndürüyoruz.
-        }
+        
 
         public void Delete (string Id)
         {
@@ -76,6 +73,10 @@ namespace MyShop.DataAccess.InMemory
             {
                 throw new Exception("product not found");
             }
+        }
+        public IQueryable<Product> Collection()
+        {
+            return products.AsQueryable();//product listesini sorgulanabilir bir liste plarak döndürüyoruz.
         }
 
 
